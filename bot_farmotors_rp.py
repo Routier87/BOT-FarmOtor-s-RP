@@ -18,9 +18,10 @@ async def on_ready():
         activity=discord.Game(name="GTA RP | FarmOtor's RP")
     )
 
-# Chargement des modules (cogs)
 @bot.event
 async def setup_hook():
     await bot.load_extension("cogs.announcements")
+    await bot.load_extension("cogs.reglement")
+    await bot.load_extension("cogs.accepter")
 
 bot.run(config.TOKEN)
